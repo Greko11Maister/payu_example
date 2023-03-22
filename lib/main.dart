@@ -12,6 +12,7 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
+    var infoPago = PayUParametersModel.example();
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
@@ -26,7 +27,25 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home: const GatewayPayUWebViewPage(infoPago: PayUParameters(),),
+      home:  GatewayPayUWebViewPage(
+        /*infoPago: PayUParameters(
+            merchantId: '508029',
+            accountId: '515321',
+            description: 'Pago en Linea PayU',
+            referenceCode: "Pago33302",
+            tax: "0",
+            taxReturnBase: "0",
+            currency: "COP",
+            amount: 35750,
+            extra1: 33302,
+            signature: "97bc9e11236527819a445678e6fe6f45",
+            test: 1,
+            buyerEmail: "greko11maister@gmail.com",
+            buyerFullName: "Usuario Prueba",
+            responseUrl: "https://tienda.leeche.app/tendero/carrito?payu=1",
+            confirmationUrl: "https://test.leeche.app/api/pagos/cliente/confirmacion-pago"),*/
+        infoPago: infoPago,
+      ),
     );
   }
 }

@@ -11,7 +11,7 @@ import 'package:payu_example/entities/payu_parameters.dart';
  class GatewayPayUWebViewPage extends StatefulWidget {
 
    final PayUParameters? infoPago;
-   const GatewayPayUWebViewPage({
+    GatewayPayUWebViewPage({
      Key? key,
      required this.infoPago,
    }) : super(key: key);
@@ -104,7 +104,7 @@ import 'package:payu_example/entities/payu_parameters.dart';
          <title>Document</title>
        </head>
        <body onload="document.form.submit();">
-         <form name="form" id='formPago' method='POST' action='${urlGatewayPayu}'>
+         <form name="form" id='formPago' method='POST' action='$urlGatewayPayu'>
            <input name='merchantId'    type='hidden'  value='${widget.infoPago?.merchantId}'   >
            <input name='accountId'     type='hidden'  value='${widget.infoPago?.accountId}'   >
            <input name='extra1'     type='hidden'  value='${widget.infoPago?.extra1}'   >
