@@ -22,6 +22,7 @@ import 'package:payu_example/entities/payu_parameters.dart';
  class _GatewayPayUWebViewPageState extends State<GatewayPayUWebViewPage> {
 
    final urlGatewayPayu =  "https://checkout.payulatam.com/ppp-web-gateway-payu";
+   final urlGatewayPayuSandBox =  "https://sandbox.checkout.payulatam.com/ppp-web-gateway-payu";
    final Completer<WebViewController> _controller =
        Completer<WebViewController>();
    final NavigationHistoryObserver _historyObserver =
@@ -104,7 +105,7 @@ import 'package:payu_example/entities/payu_parameters.dart';
          <title>Document</title>
        </head>
        <body onload="document.form.submit();">
-         <form name="form" id='formPago' method='POST' action='$urlGatewayPayu'>
+         <form name="form" id='formPago' method='POST' action='$urlGatewayPayuSandBox'>
            <input name='merchantId'    type='hidden'  value='${widget.infoPago?.merchantId}'   >
            <input name='accountId'     type='hidden'  value='${widget.infoPago?.accountId}'   >
            <input name='extra1'     type='hidden'  value='${widget.infoPago?.extra1}'   >
